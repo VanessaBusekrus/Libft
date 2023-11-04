@@ -22,7 +22,7 @@ notes:
 1. skips leading white space and looks for sign (+/-), if applicable
 2. converts array to integer 
 3. returns int with sign (-), if applicable
-4. Could have added a sperarate function for white spaces
+4. Could have added a spererate function for white spaces
 to enhance reaability
 */
 
