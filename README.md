@@ -53,6 +53,41 @@ In this part, you will find additional functions not found in the standard C lib
 
 These functions are not only useful for your Libft library but can also be used in various other projects.
 
+## Bonus Part - List Manipulation Functions
+
+If you completed the mandatory part, you can further enhance your library with these bonus functions to manipulate lists. These functions can be very useful in various projects that involve linked lists.
+
+### List Structure
+
+To work with lists, you will need to use the following structure in your code. Please add its declaration to your `libft.h` file:
+
+```c
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+} t_list;
+
+The t_list structure contains two members:
+
+content: The data contained in the node. It is a void *, allowing you to store any kind of data.
+next: The address of the next node in the list, or NULL if the current node is the last one.
+Bonus Functions
+In your Makefile, add a "bonus" rule to compile and include the bonus functions in your libft.a library. The bonus part will only be assessed if the mandatory part is perfect, meaning it has been fully implemented and works without any issues.
+
+Bonus functions:
+
+ft_lstnew: Allocates and returns a new node for the list.
+ft_lstadd_front: Adds a node at the beginning of the list.
+ft_lstsize: Counts the number of nodes in a list.
+ft_lstlast: Returns the last node of the list.
+ft_lstadd_back: Adds a node at the end of the list.
+ft_lstdelone: Deletes and frees the memory of a node and its content.
+ft_lstclear: Deletes and frees all nodes in the list and sets the pointer to NULL.
+ft_lstiter: Iterates through the list and applies a function to the content of each node.
+ft_lstmap: Iterates through the list, applies a function to the content of each node, and creates a new list.
+
+
 Feel free to explore the source code and documentation in this repository to better understand how each function is implemented.
 
 ## How to Use
