@@ -80,13 +80,13 @@ In your Makefile, add a "bonus" rule to compile and include the bonus functions 
 
 - ft_lstnew: Allocates and returns a new node for the list.
 - ft_lstadd_front: Adds a node at the beginning of the list.
-ft_lstsize: Counts the number of nodes in a list.
-ft_lstlast: Returns the last node of the list.
-ft_lstadd_back: Adds a node at the end of the list.
-ft_lstdelone: Deletes and frees the memory of a node and its content.
-ft_lstclear: Deletes and frees all nodes in the list and sets the pointer to NULL.
-ft_lstiter: Iterates through the list and applies a function to the content of each node.
-ft_lstmap: Iterates through the list, applies a function to the content of each node, and creates a new list.
+- ft_lstsize: Counts the number of nodes in a list.
+- ft_lstlast: Returns the last node of the list.
+- ft_lstadd_back: Adds a node at the end of the list.
+- ft_lstdelone: Deletes and frees the memory of a node and its content.
+- ft_lstclear: Deletes and frees all nodes in the list and sets the pointer to NULL.
+- ft_lstiter: Iterates through the list and applies a function to the content of each node.
+- ft_lstmap: Iterates through the list, applies a function to the content of each node, and creates a new list.
 
 
 Feel free to explore the source code and documentation in this repository to better understand how each function is implemented.
