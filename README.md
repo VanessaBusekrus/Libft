@@ -76,10 +76,10 @@ next: The address of the next node in the list, or NULL if the current node is t
 Bonus Functions
 In your Makefile, add a "bonus" rule to compile and include the bonus functions in your libft.a library. The bonus part will only be assessed if the mandatory part is perfect, meaning it has been fully implemented and works without any issues.
 
-Bonus functions:
+### Bonus functions:
 
-ft_lstnew: Allocates and returns a new node for the list.
-ft_lstadd_front: Adds a node at the beginning of the list.
+- ft_lstnew: Allocates and returns a new node for the list.
+- ft_lstadd_front: Adds a node at the beginning of the list.
 ft_lstsize: Counts the number of nodes in a list.
 ft_lstlast: Returns the last node of the list.
 ft_lstadd_back: Adds a node at the end of the list.
