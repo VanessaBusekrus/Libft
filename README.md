@@ -61,12 +61,13 @@ If you completed the mandatory part, you can further enhance your library with t
 
 To work with lists, you will need to use the following structure in your code. Please add its declaration to your `libft.h` file:
 
-```c
+```
 typedef struct s_list
 {
     void *content;
     struct s_list *next;
 } t_list;
+```
 
 The t_list structure contains two members:
 
