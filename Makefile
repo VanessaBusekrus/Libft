@@ -47,8 +47,21 @@ SOURCES_MAND = ft_isalpha.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
-OBJS_MAND = $(SOURCES_MAND:.c=.o)
+SOURCES_BONUS = \
+			ft_lstadd_back.c \
+			ft_lstadd_front.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstlast.c \
+			ft_lstmap.c \
+			ft_lstnew.c \
+			ft_lstsize.c
 
+OBJS_MAND = $(SOURCES_MAND:.c=.o)
+OBJS_BONUS = $(SOURCES_BONUS: .c=.o)
+
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 AR = ar
