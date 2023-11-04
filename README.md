@@ -59,6 +59,6 @@ Feel free to explore the source code and documentation in this repository to bet
 
 To use the Libft library, you can simply include the `libft.h` header file in your project and link the compiled `libft.a` library. Make sure to follow the standard C library function prototypes, but prefix them with 'ft_'.
 
-If you encounter any issues or have suggestions for improvements, please feel free to [submit an issue](https://github.com/your_username/Libft/issues) or create a [pull request](https://github.com/your_username/Libft/pulls).
+If you encounter any issues or have suggestions for improvements, please feel free to [submit an issue](https://github.com/Vanessa-BV/Libft/issues) or create a [pull request](https://github.com/Vanessa-BV/Libft/pulls).
 
 Happy coding with your Libft library!
