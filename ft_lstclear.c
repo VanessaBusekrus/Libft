@@ -1,41 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstsize.c                                       :+:    :+:            */
+/*   ft_lstclear.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: vbusekru <vbusekru@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/24 12:22:44 by vbusekru      #+#    #+#                 */
-/*   Updated: 2023/10/24 12:22:44 by vbusekru      ########   odam.nl         */
+/*   Created: 2023/11/04 17:28:03 by vbusekru      #+#    #+#                 */
+/*   Updated: 2023/11/04 17:28:03 by vbusekru      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Description:
+Deletes and frees the given node and every
+successor of that node, using the function ’del’
+and free(3).
+Finally, the pointer to the list must be set to
+NULL.
+*/
+
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	int		len;
+	t_list	*temp;
 
-	len = 0;
-	if (lst == NULL)
-		return (0);
-	while (lst)
+	temp = *lst;
+	if (!lst || !del)
+		return ;
+	while (*lst)
 	{
-		len++;
-		lst = lst->next;
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		(*lst) = temp;
 	}
-	return (len);
 }
-
-// int	main(void)
-// {
-// 	t_list	*list = ft_lstnew("a");
-// 	t_list	*new = ft_lstnew("g");
-// 	int		len;
-
-// 	ft_lstadd_front(&list, new);
-// 	printf("  list: %s\n", (char *)list->content);
-// 	len = ft_lstsize(list);
-// 	printf("length: %d\n", len);
-// 	return (0);
-// }

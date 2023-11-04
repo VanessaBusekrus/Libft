@@ -14,12 +14,12 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!lst || !new)
-		return ;
-	new->next = *lst;
-	lst = &new;
+	if (lst && new)
+	{
+		new->next = *lst;
+		lst = &new;
+	}
 }
-
 // int	main(void)
 // {
 // 	t_list	*el1 = ft_lstnew("a");

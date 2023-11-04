@@ -18,7 +18,7 @@
 #include <ctype.h>
 #include <unistd.h>
 #include <bsd/string.h>
-# include <stdint.h>
+#include <stdint.h>
 
 typedef struct s_list
 {

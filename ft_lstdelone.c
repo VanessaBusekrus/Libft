@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstsize.c                                       :+:    :+:            */
+/*   ft_lstdelone.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: vbusekru <vbusekru@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/24 12:22:44 by vbusekru      #+#    #+#                 */
-/*   Updated: 2023/10/24 12:22:44 by vbusekru      ########   odam.nl         */
+/*   Created: 2023/11/04 17:28:50 by vbusekru      #+#    #+#                 */
+/*   Updated: 2023/11/04 17:28:50 by vbusekru      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Descrption:
+Takes as a parameter a node and frees the memory of
+the node’s content using the function ’del’ given
+as a parameter and free the node. The memory of
+’next’ must not be freed.
+*/
+
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	int		len;
-
-	len = 0;
-	if (lst == NULL)
-		return (0);
-	while (lst)
-	{
-		len++;
-		lst = lst->next;
-	}
-	return (len);
+	if (!del || !lst)
+		return ;
+	del(lst->content);
+	free(lst);
+	lst = NULL;
 }
-
-// int	main(void)
-// {
-// 	t_list	*list = ft_lstnew("a");
-// 	t_list	*new = ft_lstnew("g");
-// 	int		len;
-
-// 	ft_lstadd_front(&list, new);
-// 	printf("  list: %s\n", (char *)list->content);
-// 	len = ft_lstsize(list);
-// 	printf("length: %d\n", len);
-// 	return (0);
-// }

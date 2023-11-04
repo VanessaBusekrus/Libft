@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstsize.c                                       :+:    :+:            */
+/*   ft_lstiter.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: vbusekru <vbusekru@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/10/24 12:22:44 by vbusekru      #+#    #+#                 */
-/*   Updated: 2023/10/24 12:22:44 by vbusekru      ########   odam.nl         */
+/*   Created: 2023/11/04 17:29:30 by vbusekru      #+#    #+#                 */
+/*   Updated: 2023/11/04 17:29:30 by vbusekru      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Description:
+Iterates the list ’lst’ and applies the function
+’f’ on the content of each node.
+*/
+
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int		len;
-
-	len = 0;
-	if (lst == NULL)
-		return (0);
+	if (!lst || !f)
+		return ;
 	while (lst)
 	{
-		len++;
+		f(lst->content);
 		lst = lst->next;
 	}
-	return (len);
 }
-
-// int	main(void)
-// {
-// 	t_list	*list = ft_lstnew("a");
-// 	t_list	*new = ft_lstnew("g");
-// 	int		len;
-
-// 	ft_lstadd_front(&list, new);
-// 	printf("  list: %s\n", (char *)list->content);
-// 	len = ft_lstsize(list);
-// 	printf("length: %d\n", len);
-// 	return (0);
-// }
