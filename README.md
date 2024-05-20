@@ -1,3 +1,5 @@
+# Codam Rank 00
+
 # Libft - The very first library
 
 Libft is a project that involves rewriting a set of functions from the standard C library (libc) with the same prototypes and behaviors as the original functions. The only difference is that the functions will have names prefixed with 'ft_' instead of the standard names. This project aims to help you understand the underlying implementation of these functions and provide a library that can be used in other projects.
