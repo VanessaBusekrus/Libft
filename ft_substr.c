@@ -37,10 +37,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	substr_len;
 	size_t	src_len;
 
+	if (s == NULL)
+		return (NULL);
 	src_len = ft_strlen(s);
 	substr_len = src_len - (size_t)start;
-	if (!s)
-		return (NULL);
 	if (src_len < start)
 		return ((char *)ft_calloc(1, sizeof(char)));
 	if (len > src_len)
@@ -48,7 +48,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (substr_len > len)
 		substr_len = len;
 	sub = (char *)ft_calloc(substr_len +1, sizeof(char));
-	if (!sub)
+	if (sub == NULL)
 		return (NULL);
 	ft_strlcpy(sub, (s + start), (len + 1));
 	return (sub);
