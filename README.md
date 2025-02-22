@@ -90,13 +90,3 @@ In your Makefile, add a "bonus" rule to compile and include the bonus functions 
 - `ft_lstiter`: Iterates through the list and applies a function to the content of each node.
 - `ft_lstmap`: Iterates through the list, applies a function to the content of each node, and creates a new list.
 
-
-Feel free to explore the source code and documentation in this repository to better understand how each function is implemented.
-
-## How to Use
-
-To use the Libft library, you can simply include the `libft.h` header file in your project and link the compiled `libft.a` library. Make sure to follow the standard C library function prototypes, but prefix them with 'ft_'.
-
-If you encounter any issues or have suggestions for improvements, please feel free to [submit an issue](https://github.com/Vanessa-BV/Libft/issues) or create a [pull request](https://github.com/Vanessa-BV/Libft/pulls).
-
-Happy coding with your Libft library!
